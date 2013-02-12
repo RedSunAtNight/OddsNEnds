@@ -7,7 +7,7 @@ import numpy
 '''
 interaction.py
 A particle interaction in two dimensions.
-@author: Helenka Casler
+@author: RedSunAtNight
 @version: 1.0
 Declares the Particle class.
 Makes two particles (called positron and electron, but they are classical particles, not quantum ones) and sends them past each other. Animates their interaction.
