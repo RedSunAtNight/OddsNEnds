@@ -2,6 +2,11 @@
 from numpy import zeros, ones
 from matplotlib.pyplot import contourf, show
 
+"""
+antwalker.py
+A little example of Langton's Ant.
+@author: RedSunAtNight
+"""
 # Langton's Ant. An "ant" starts in the middle of a grid. 
 # If it hits a square marked zero, the mark changes to 1 and the ant turns left.
 # If it hits a square marked 1, the mark changes to zero and the ant turns right.
