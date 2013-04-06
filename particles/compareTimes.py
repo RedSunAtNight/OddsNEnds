@@ -24,9 +24,6 @@ justnums = re.compile(r'[0-9]+\.[0-9]+')
 # go through all args. Ignore the one that starts this program.
 for item in sys.argv[1:]:
 	timesDict[item] = {'real':0.0, 'user':0.0, 'sys':0.0}
-	realTime = 0
-	userTime = 0
-	sysTime = 0
 	for i in range(0, iterations):
 		# time the program
 		runner = subprocess.Popen('time -p python {0}'.format(item), shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
