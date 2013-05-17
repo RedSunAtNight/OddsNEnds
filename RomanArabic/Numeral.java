@@ -1,7 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package redsunatnight.oddsnends.romanarabic;
 
 /**
@@ -12,6 +9,7 @@ package redsunatnight.oddsnends.romanarabic;
  *      Roman numeral, in all caps
  * @param: int arabicIn [optonal]
  *      Positive integer
+ * Converts between Roman and Arabic numerals
  * 
  * Public methods:
  *      setValue
@@ -57,22 +55,6 @@ package redsunatnight.oddsnends.romanarabic;
  *          the Roman numeral can be converted to an Arabic numeral. Throws
  *          BadNumeralException otherwise.
  * 
- * Allows conversion between Arabic and Roman numerals.
- * For the sake of practice, uses public, private, and final methods.
- *      Uses multiple constructors, including a default constructor.
- *      Uses regular expressions, two different ways.
- *      If/else and switch/case.
- *      For loops.
- *      Exceptions.
- * 
- * Java does not have operator overloading.
- * Random thought: enums are useful when you want a type that can only vary 
- * among certain values: planets in the solar system, or days of the week, etc.
- * 
- * TODO: deal with the fact that the constructor can throw an exception.
- *      This can result in a partially initialized object.
- *      This is not really a security problem for this class, but it could be
- *      for other classes. So, for good practice, deal with it here.
  */
 import java.util.regex.*;
 import java.io.Serializable;
