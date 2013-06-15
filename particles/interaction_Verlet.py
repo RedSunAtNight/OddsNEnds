@@ -75,11 +75,14 @@ class Particle:
             self.prevposition = self.position
             for i in range(0, self.position.length):
                 self.position[i] = self.position[i] + self.initvelocity[i]*timestep + 0.5*self.acceleration[i]*timestep**2
+                self.velocity[i] = self.velocity + self.acceleration[i]*timestep
         elif self.stepno > 1:
             tempPosition = self.position
             for i in range(0, self.position.length):
                 # Verlet Integration. x(t+dt) = 2x(t) - x(t-dt) + a(t)dt^2 + O(dt^4)
                 self.position[i] = (2 * self.position[i]) - self.prevposition[i] + self.acceleration[i]*timestep**2
+                # at least loosely keep track of velocity
+                self.velocity[i] = self.velocity + self.acceleration[i]*timestep
             self.prevposition = tempPosition
         else:
             raise RuntimeError('At step {0}: this stepno is invalid.'.format(self.stepno))
